@@ -6,128 +6,101 @@
   <title>Admin LCET</title>
 </head>
 <body>
-  <!-- Charger Decap CMS avec un script sécurisé -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Utiliser Netlify CMS (ancien nom de Decap) -->
+  <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
   
   <script>
-    // Attendre que Decap CMS soit chargé
-    document.addEventListener('DOMContentLoaded', function() {
-      // Vérifier que CMS est disponible
-      if (typeof window.CMS === 'undefined') {
-        console.error('Decap CMS not loaded. Retrying...');
-        // Réessayer après un court délai
-        setTimeout(initCMS, 1000);
-        return;
-      }
-      initCMS();
-    });
-
-    function initCMS() {
-      try {
-        const config = {
-          backend: {
-            name: 'github',
-            repo: 'Deyoste2r/lcet-site',
-            branch: 'main',
-            base_url: 'https://college-evangelique.vercel.app',
-            auth_endpoint: 'api/auth',
-          },
-          media_folder: 'public/images',
-          public_folder: '/images',
-          load_config_file: false,
-          collections: [
+    // Configuration identique
+    const config = {
+      backend: {
+        name: 'github',
+        repo: 'Deyoste2r/lcet-site',
+        branch: 'main',
+        base_url: 'https://college-evangelique.vercel.app',
+        auth_endpoint: 'api/auth',
+      },
+      media_folder: 'public/images',
+      public_folder: '/images',
+      load_config_file: false,
+      collections: [
+        {
+          name: 'settings',
+          label: 'Paramètres généraux',
+          files: [
             {
-              name: 'settings',
-              label: 'Paramètres généraux',
-              files: [
-                {
-                  name: 'general',
-                  label: 'Informations générales',
-                  file: 'src/content/settings/general.json',
-                  fields: [
-                    { label: 'Frais 6ème', name: 'frais_6eme', widget: 'number' },
-                    { label: 'Frais 5ème', name: 'frais_5eme', widget: 'number' },
-                    { label: 'Frais 4ème', name: 'frais_4eme', widget: 'number' },
-                    { label: 'Frais 2nde', name: 'frais_2nde', widget: 'number' },
-                    { label: 'Frais 1ère', name: 'frais_1ere', widget: 'number' },
-                    { label: 'Frais Terminale', name: 'frais_terminale', widget: 'number' },
-                    { label: 'Date rentrée examens', name: 'date_rentree_examens', widget: 'datetime' },
-                    { label: 'Date rentrée autres', name: 'date_rentree_autres', widget: 'datetime' },
-                    { label: 'Téléphone', name: 'telephone', widget: 'string' },
-                    { label: 'Email', name: 'email', widget: 'string' },
-                    { label: 'Adresse', name: 'adresse', widget: 'text' },
-                    { label: 'Présentation', name: 'presentation', widget: 'text' },
-                  ],
-                },
-              ],
-            },
-            {
-              name: 'gallery',
-              label: 'Galerie photos',
-              folder: 'src/content/gallery',
-              create: true,
+              name: 'general',
+              label: 'Informations générales',
+              file: 'src/content/settings/general.json',
               fields: [
-                { label: 'Titre', name: 'title', widget: 'string' },
-                { label: 'Description', name: 'description', widget: 'text' },
-                { label: 'Date', name: 'date', widget: 'datetime' },
-                { label: 'Image', name: 'image', widget: 'image' },
-              ],
-            },
-            {
-              name: 'amicale',
-              label: 'Amicale des anciens',
-              folder: 'src/content/amicale',
-              create: true,
-              fields: [
-                { label: 'Titre activité', name: 'title', widget: 'string' },
-                { label: 'Description', name: 'description', widget: 'text' },
-                { label: 'Date', name: 'date', widget: 'datetime' },
-                { label: 'Image', name: 'image', widget: 'image' },
-              ],
-            },
-            {
-              name: 'evenements',
-              label: 'Événements',
-              folder: 'src/content/evenements',
-              create: true,
-              fields: [
-                { label: 'Titre', name: 'title', widget: 'string' },
-                { label: 'Date', name: 'date', widget: 'datetime' },
-                { label: 'Description', name: 'description', widget: 'text' },
-                { label: 'Image', name: 'image', widget: 'image' },
-              ],
-            },
-            {
-              name: 'news',
-              label: 'Actualités',
-              folder: 'src/content/news',
-              create: true,
-              fields: [
-                { label: 'Titre', name: 'title', widget: 'string' },
-                { label: 'Date', name: 'date', widget: 'datetime' },
-                { label: 'Contenu', name: 'body', widget: 'markdown' },
+                { label: 'Frais 6ème', name: 'frais_6eme', widget: 'number' },
+                { label: 'Frais 5ème', name: 'frais_5eme', widget: 'number' },
+                { label: 'Frais 4ème', name: 'frais_4eme', widget: 'number' },
+                { label: 'Frais 2nde', name: 'frais_2nde', widget: 'number' },
+                { label: 'Frais 1ère', name: 'frais_1ere', widget: 'number' },
+                { label: 'Frais Terminale', name: 'frais_terminale', widget: 'number' },
+                { label: 'Date rentrée examens', name: 'date_rentree_examens', widget: 'datetime' },
+                { label: 'Date rentrée autres', name: 'date_rentree_autres', widget: 'datetime' },
+                { label: 'Téléphone', name: 'telephone', widget: 'string' },
+                { label: 'Email', name: 'email', widget: 'string' },
+                { label: 'Adresse', name: 'adresse', widget: 'text' },
+                { label: 'Présentation', name: 'presentation', widget: 'text' },
               ],
             },
           ],
-        };
+        },
+        {
+          name: 'gallery',
+          label: 'Galerie photos',
+          folder: 'src/content/gallery',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'amicale',
+          label: 'Amicale des anciens',
+          folder: 'src/content/amicale',
+          create: true,
+          fields: [
+            { label: 'Titre activité', name: 'title', widget: 'string' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'evenements',
+          label: 'Événements',
+          folder: 'src/content/evenements',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'news',
+          label: 'Actualités',
+          folder: 'src/content/news',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Contenu', name: 'body', widget: 'markdown' },
+          ],
+        },
+      ],
+    };
 
-        // Initialiser Decap CMS
-        window.CMS.init({ config });
-        console.log('✅ Decap CMS initialisé avec succès');
-      } catch (error) {
-        console.error('❌ Erreur lors de l\'initialisation de Decap CMS:', error);
-        document.body.innerHTML = `
-          <div style="padding:20px;font-family:sans-serif;max-width:600px;margin:50px auto;text-align:center;background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-            <h2 style="color:#0F1A2C;">⚠️ Erreur de chargement</h2>
-            <p style="color:#666;">Impossible de charger l'interface d'administration.</p>
-            <p style="color:#999;font-size:14px;">${error.message}</p>
-            <button onclick="location.reload()" style="margin-top:15px;padding:10px 20px;background:#D4AF37;color:#0F1A2C;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">
-              Réessayer
-            </button>
-          </div>
-        `;
-      }
-    }
+    // Initialiser
+    window.CMS.init({ config });
+    console.log('✅ Netlify CMS initialisé');
   </script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin LCET</title>
+</head>
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    const config = {
+      backend: {
+        name: 'github',
+        repo: 'Deyoste2r/lcet-site',
+        branch: 'main',
+      },
+      media_folder: 'public/images',
+      public_folder: '/images',
+      collections: [
+        {
+          name: 'settings',
+          label: 'Paramètres généraux',
+          files: [
+            {
+              name: 'general',
+              label: 'Informations générales',
+              file: 'src/content/settings/general.json',
+              fields: [
+                { label: 'Frais 6ème', name: 'frais_6eme', widget: 'number' },
+                { label: 'Frais 5ème', name: 'frais_5eme', widget: 'number' },
+                { label: 'Frais 4ème', name: 'frais_4eme', widget: 'number' },
+                { label: 'Frais 2nde', name: 'frais_2nde', widget: 'number' },
+                { label: 'Frais 1ère', name: 'frais_1ere', widget: 'number' },
+                { label: 'Frais Terminale', name: 'frais_terminale', widget: 'number' },
+                { label: 'Date rentrée examens', name: 'date_rentree_examens', widget: 'datetime' },
+                { label: 'Date rentrée autres', name: 'date_rentree_autres', widget: 'datetime' },
+                { label: 'Téléphone', name: 'telephone', widget: 'string' },
+                { label: 'Email', name: 'email', widget: 'string' },
+                { label: 'Adresse', name: 'adresse', widget: 'text' },
+                { label: 'Présentation', name: 'presentation', widget: 'text' },
+              ],
+            },
+          ],
+        },
+        {
+          name: 'gallery',
+          label: 'Galerie photos',
+          folder: 'src/content/gallery',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'amicale',
+          label: 'Amicale des anciens',
+          folder: 'src/content/amicale',
+          create: true,
+          fields: [
+            { label: 'Titre activité', name: 'title', widget: 'string' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'evenements',
+          label: 'Événements',
+          folder: 'src/content/evenements',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Description', name: 'description', widget: 'text' },
+            { label: 'Image', name: 'image', widget: 'image' },
+          ],
+        },
+        {
+          name: 'news',
+          label: 'Actualités',
+          folder: 'src/content/news',
+          create: true,
+          fields: [
+            { label: 'Titre', name: 'title', widget: 'string' },
+            { label: 'Date', name: 'date', widget: 'datetime' },
+            { label: 'Contenu', name: 'body', widget: 'markdown' },
+          ],
+        },
+      ],
+    };
+    window.CMS.init({ config });
+  </script>
+</body>
+</html>

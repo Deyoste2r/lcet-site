@@ -4,9 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin LCET</title>
+  <!-- Utiliser une version stable de Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@2.10.0/dist/decap-cms.js"></script>
+  <style>
+    /* Styles pour éviter les conflits React */
+    #nc-root {
+      position: relative;
+      z-index: 9999;
+    }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div id="nc-root"></div>
   <script>
     const config = {
       backend: {
@@ -18,6 +27,8 @@
       },
       media_folder: 'public/images',
       public_folder: '/images',
+      // Désactiver les fonctionnalités problématiques
+      load_config_file: false,
       collections: [
         {
           name: 'settings',
@@ -93,7 +104,12 @@
         },
       ],
     };
-    window.CMS.init({ config });
+    
+    // Initialiser Decap CMS avec le conteneur dédié
+    window.CMS.init({
+      config: config,
+      root: document.getElementById('nc-root'),
+    });
   </script>
 </body>
 </html>

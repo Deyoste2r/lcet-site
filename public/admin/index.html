@@ -6,23 +6,22 @@
   <title>Admin LCET</title>
 </head>
 <body>
-  <!-- Utiliser une version spécifique et stable -->
-  <script src="https://unpkg.com/decap-cms@2.10.0/dist/decap-cms.js"></script>
+  <!-- Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
   <script>
-    // Attendre que la page soit chargée
-    document.addEventListener('DOMContentLoaded', function() {
-      // Vérifier que CMS est disponible
-      if (typeof window.CMS !== 'undefined') {
-        try {
-          window.CMS.init();
-          console.log('✅ Decap CMS initialisé avec config.yml');
-        } catch (error) {
-          console.error('❌ Erreur:', error);
-        }
-      } else {
-        console.error('❌ Decap CMS non chargé');
-      }
-    });
+    // Configuration minimaliste
+    const config = {
+      backend: {
+        name: 'github',
+        repo: 'Deyoste2r/lcet-site',
+        branch: 'main',
+      },
+      media_folder: 'public/images',
+      public_folder: '/images',
+    };
+    
+    window.CMS.init({ config });
+    console.log('✅ Netlify CMS initialisé');
   </script>
 </body>
 </html>

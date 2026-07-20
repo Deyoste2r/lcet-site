@@ -12,7 +12,7 @@ const Footer = () => {
               Lycée-College Évangélique
             </h3>
             <p className="text-gray-300 text-sm mb-4">
-              Depuis 1947, former l'élite tchadienne dans la rigueur et l'excellence.
+              Depuis 1964, former l'élite tchadienne dans la rigueur et l'excellence.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
               <p className="flex items-center space-x-2">
@@ -21,7 +21,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center space-x-2">
                 <FaPhone className="text-[#D4AF37]" />
-                <span>+235 XX XX XX XX</span>
+                <span>+235 62 10 90 97</span>
               </p>
               <p className="flex items-center space-x-2">
                 <FaEnvelope className="text-[#D4AF37]" />

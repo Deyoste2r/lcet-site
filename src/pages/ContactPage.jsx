@@ -9,7 +9,7 @@ const ContactPage = () => {
       <div className="grid md:grid-cols-2 gap-8">
         {/* Coordonnées */}
         <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-heading font-bold text-[#0F1A2C] mb-6">📍 Coordonnées</h2>
+          <h2 className="text-xl font-heading font-bold text-[#0F1A2C] mb-6">Coordonnées</h2>
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
               <FaMapMarkerAlt className="text-[#D4AF37] text-xl mt-1" />
@@ -22,7 +22,7 @@ const ContactPage = () => {
               <FaPhone className="text-[#D4AF37] text-xl mt-1" />
               <div>
                 <h3 className="font-semibold text-[#0F1A2C]">Téléphone</h3>
-                <p className="text-gray-600">+235 XX XX XX XX</p>
+                <p className="text-gray-600">+235 62 10 90 97</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">

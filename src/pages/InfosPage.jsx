@@ -5,9 +5,9 @@ const InfosPage = () => {
 
       {/* Tests d'entrée */}
       <div className="bg-white rounded-lg shadow-lg p-6 mb-8 border-l-4 border-[#D4AF37]">
-        <h2 className="text-2xl font-heading font-bold text-[#0F1A2C] mb-4">🎓 Tests d'entrée 2025</h2>
-        <p className="text-gray-600 mb-2"><strong>📅 Date :</strong> 11 juillet 2025</p>
-        <p className="text-gray-600 mb-4"><strong>📌 Résultats :</strong> 14 juillet 2025</p>
+        <h2 className="text-2xl font-heading font-bold text-[#0F1A2C] mb-4">🎓 Tests d'entrée 2026</h2>
+        <p className="text-gray-600 mb-2"><strong>📅 Date :</strong> 11 juillet 2026</p>
+        <p className="text-gray-600 mb-4"><strong>📌 Résultats :</strong> 14 juillet 2026</p>
         
         <h3 className="font-bold text-[#0F1A2C] mt-4 mb-2">📚 Niveaux concernés :</h3>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -66,13 +66,13 @@ const InfosPage = () => {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[#1E7A5E]">
           <h3 className="text-xl font-heading font-bold text-[#0F1A2C] mb-2">🔄 Réinscription</h3>
-          <p className="text-gray-600"><strong>Anciens élèves :</strong> à partir du 1er juillet 2025</p>
+          <p className="text-gray-600"><strong>Anciens élèves :</strong> à partir du 1er juillet 2026</p>
           <p className="text-red-600 text-sm mt-2 font-semibold">⚠️ Redoublants : confirmation avant le 10 juillet 2025</p>
         </div>
         <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[#D4AF37]">
-          <h3 className="text-xl font-heading font-bold text-[#0F1A2C] mb-2">📆 Rentrée 2025-2026</h3>
+          <h3 className="text-xl font-heading font-bold text-[#0F1A2C] mb-2">📆 Rentrée 2026-2027</h3>
           <p className="text-gray-600"><strong>Classes d'examen (3ème &amp; Terminale) :</strong> 15 septembre 2025</p>
-          <p className="text-gray-600"><strong>Autres classes :</strong> 22 septembre 2025</p>
+          <p className="text-gray-600"><strong>Autres classes :</strong> 22 septembre 2026</p>
         </div>
       </div>
     </div>

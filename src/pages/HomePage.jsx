@@ -3,15 +3,25 @@ import { FaCalendar, FaBook, FaUsers, FaArrowRight } from 'react-icons/fa';
 
 const HomePage = () => {
   const infos = {
-    presentation: "Depuis 1947, le Lycée-College Évangélique du Tchad forme l'élite tchadienne dans la rigueur et l'excellence.",
-    date_rentree_examens: "15 septembre 2025",
-    date_rentree_autres: "22 septembre 2025"
+    presentation: "Depuis 1964, le Lycée-College Évangélique du Tchad forme l'élite tchadienne dans la rigueur et l'excellence.",
+    date_rentree_examens: "15 septembre 2026",
+    date_rentree_autres: "22 septembre 2026"
   };
 
   return (
     <div>
-      {/* Bannière avec filigrane animé */}
-      <div className="relative bg-[#0F1A2C] text-white py-20 px-4 overflow-hidden">
+      {/* Bannière avec image de fond */}
+      <div 
+        className="relative text-white py-20 px-4 overflow-hidden min-h-[400px] flex items-center"
+        style={{
+          backgroundImage: 'url("/images/banner.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Overlay sombre pour la lisibilité */}
+        <div className="absolute inset-0 bg-[#0F1A2C] bg-opacity-70"></div>
+        
         {/* Filigrane animé */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span className="text-[15rem] md:text-[25rem] font-heading font-bold text-white/5 animate-float select-none">
@@ -27,7 +37,7 @@ const HomePage = () => {
             Lycée-College Évangélique
           </h1>
           <p className="text-[#D4AF37] text-xl md:text-2xl mt-2">🇹🇩 N'Djaména</p>
-          <p className="text-lg mt-4 max-w-2xl mx-auto text-gray-300">
+          <p className="text-lg mt-4 max-w-2xl mx-auto text-gray-200">
             {infos.presentation}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -47,7 +57,7 @@ const HomePage = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-[#D4AF37] hover:shadow-2xl transition-shadow duration-300">
             <FaCalendar className="text-[#D4AF37] text-4xl mx-auto mb-3" />
-            <h3 className="font-heading text-xl font-bold text-[#0F1A2C]">Rentrée 2025</h3>
+            <h3 className="font-heading text-xl font-bold text-[#0F1A2C]">Rentrée 2026</h3>
             <p className="text-gray-600 mt-2">
               <strong>Classes d'examen :</strong> {infos.date_rentree_examens}
             </p>
@@ -59,8 +69,8 @@ const HomePage = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-[#0F1A2C] hover:shadow-2xl transition-shadow duration-300">
             <FaBook className="text-[#0F1A2C] text-4xl mx-auto mb-3" />
             <h3 className="font-heading text-xl font-bold text-[#0F1A2C]">Tests d'entrée</h3>
-            <p className="text-gray-600 mt-2">📅 11 juillet 2025</p>
-            <p className="text-gray-600">📌 Résultats : 14 juillet 2025</p>
+            <p className="text-gray-600 mt-2">📅 11 juillet 2026</p>
+            <p className="text-gray-600">📌 Résultats : 14 juillet 2026</p>
             <Link to="/infos" className="text-[#D4AF37] font-semibold hover:underline text-sm mt-2 inline-block">
               Voir les détails →
             </Link>

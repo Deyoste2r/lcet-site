@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <span className="flex items-center space-x-1">
             <FaPhone className="text-[#D4AF37]" />
-            <span>+235 XX XX XX XX</span>
+            <span>+235 62 10 90 97</span>
           </span>
           <span className="flex items-center space-x-1">
             <FaEnvelope className="text-[#D4AF37]" />
@@ -37,15 +37,27 @@ const Header = () => {
       {/* Navigation principale */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-[#0F1A2C] rounded-full flex items-center justify-center text-[#D4AF37] font-bold text-sm">
+          <div className="flex items-center space-x-3">
+            {/* Logo image avec taille agrandie */}
+            <img 
+              src="/images/logo.png" 
+              alt="Logo LCET" 
+              className="w-14 h-14 object-contain rounded-full border-2 border-[#D4AF37]"
+              onError={(e) => {
+                // Si le logo ne charge pas, afficher le texte LCET en fallback
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            {/* Fallback si l'image ne charge pas */}
+            <div className="w-14 h-14 bg-[#0F1A2C] rounded-full flex items-center justify-center text-[#D4AF37] font-bold text-lg hidden">
               LCET
             </div>
             <div>
               <h1 className="text-[#0F1A2C] font-heading text-lg font-bold leading-tight hidden sm:block">
                 Lycée-College Évangélique
               </h1>
-              <span className="text-xs text-[#D4AF37] font-semibold hidden sm:block">Depuis 1947</span>
+              <span className="text-xs text-[#D4AF37] font-semibold hidden sm:block">Depuis 1964</span>
             </div>
           </div>
 

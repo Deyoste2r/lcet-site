@@ -1,9 +1,9 @@
 const EvenementsPage = () => {
   const evenements = [
-    { id: 1, title: "Tests d'entrée 2025", date: "11 juillet 2025", description: "Tests d'entrée pour les nouveaux élèves (6ème, 5ème, 4ème, 2nde, 1ère).", image: "https://via.placeholder.com/400x200/D4AF37/0F1A2C?text=Tests+d'entrée" },
-    { id: 2, title: "Rentrée des classes d'examen", date: "15 septembre 2025", description: "Début des cours pour les classes de 3ème et Terminale.", image: "https://via.placeholder.com/400x200/1A3A6B/D4AF37?text=Rentrée+examens" },
-    { id: 3, title: "Rentrée générale", date: "22 septembre 2025", description: "Début des cours pour toutes les autres classes (6ème, 5ème, 4ème, 2nde, 1ère).", image: "https://via.placeholder.com/400x200/1E7A5E/D4AF37?text=Rentrée+générale" },
-    { id: 4, title: "Journée portes ouvertes", date: "À venir", description: "Découvrez le LCET et ses infrastructures lors de notre journée portes ouvertes.", image: "https://via.placeholder.com/400x200/0F1A2C/D4AF37?text=Portes+ouvertes" },
+    { id: 1, title: "Tests d'entrée 2026", date: "11 juillet 2026", description: "Tests d'entrée pour les nouveaux élèves (6ème, 5ème, 4ème, 2nde, 1ère).", image: "/images/evenements/tests-2025.jpg" },
+    { id: 2, title: "Rentrée des classes d'examen", date: "15 septembre 2026", description: "Début des cours pour les classes de 3ème et Terminale.", image: "/images/evenements/rentree-examens.jpg" },
+    { id: 3, title: "Rentrée générale", date: "22 septembre 2026", description: "Début des cours pour toutes les autres classes (6ème, 5ème, 4ème, 2nde, 1ère).", image: "/images/evenements/rentree-generale.jpg" },
+    { id: 4, title: "Journée portes ouvertes", date: "À venir", description: "Découvrez le LCET et ses infrastructures lors de notre journée portes ouvertes.", image: "/images/evenements/portes-ouvertes.jpg" },
   ];
 
   return (
@@ -14,7 +14,14 @@ const EvenementsPage = () => {
       <div className="grid md:grid-cols-2 gap-6">
         {evenements.map((event) => (
           <div key={event.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            <img src={event.image} alt={event.title} className="w-full h-40 object-cover" />
+            <img 
+              src={event.image} 
+              alt={event.title} 
+              className="w-full h-40 object-cover"
+              onError={(e) => {
+                e.target.src = 'https://via.placeholder.com/400x200/0F1A2C/D4AF37?text=Event+LCET';
+              }}
+            />
             <div className="p-6">
               <div className="flex justify-between items-start">
                 <h3 className="font-heading text-xl font-bold text-[#0F1A2C]">{event.title}</h3>

@@ -10,7 +10,7 @@ const GaleriePage = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">📸 Galerie</h1>
+      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">Galerie</h1>
       <p className="text-gray-600 mb-8">Découvrez la vie du Lycée-College Évangélique du Tchad en images.</p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 const ContactPage = () => {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">📞 Contact</h1>
+      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">Contact</h1>
       <p className="text-gray-600 mb-8">N'hésitez pas à nous contacter pour toute information.</p>
 
       <div className="grid md:grid-cols-2 gap-8">

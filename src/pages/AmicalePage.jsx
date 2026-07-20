@@ -8,9 +8,9 @@ const AmicalePage = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">🤝 Amicale des anciens</h1>
+      <h1 className="font-heading text-3xl font-bold text-[#0F1A2C] mb-4">Amicale des anciens</h1>
       <p className="text-gray-600 mb-8">
-        L'Amicale des anciens élèves du LCET rassemble les promotions depuis 1947. 
+        L'Amicale des anciens élèves du LCET rassemble les promotions depuis 1964. 
         Retrouvez ici nos activités et événements.
       </p>
 

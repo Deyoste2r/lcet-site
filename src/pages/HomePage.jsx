@@ -14,7 +14,7 @@ const HomePage = () => {
       <div 
         className="relative text-white py-20 px-4 overflow-hidden min-h-[400px] flex items-center"
         style={{
-          backgroundImage: 'url("/images/banner.jpg")',
+          backgroundImage: 'url("./images/banner.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -69,8 +69,8 @@ const HomePage = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-[#0F1A2C] hover:shadow-2xl transition-shadow duration-300">
             <FaBook className="text-[#0F1A2C] text-4xl mx-auto mb-3" />
             <h3 className="font-heading text-xl font-bold text-[#0F1A2C]">Tests d'entrée</h3>
-            <p className="text-gray-600 mt-2">📅 11 juillet 2026</p>
-            <p className="text-gray-600">📌 Résultats : 14 juillet 2026</p>
+            <p className="text-gray-600 mt-2">📅 23 juillet 2026</p>
+            <p className="text-gray-600">Résultats : 27 juillet 2026</p>
             <Link to="/infos" className="text-[#D4AF37] font-semibold hover:underline text-sm mt-2 inline-block">
               Voir les détails →
             </Link>
